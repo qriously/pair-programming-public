@@ -1,33 +1,81 @@
-.App {
-  text-align: center;
+body {
+    font-family: 'Raleway', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.question-list {
+    width: 500px;
+    margin: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.question {
+    position: relative;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 1em;
+    border: 1px solid #2b2b2b;
+    /*box-shadow: 4px 4px 14px 0 #2f2e2e;*/
+    color: #3C3F41;
 }
 
-.App-link {
-  color: #61dafb;
+.question.active {
+    border-color: #e4bd5e;
+    background: rgba(228, 189, 94, 0.4);
+}
+.action-container {
+    width: 100%;
+    color: #e4bd5e;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.action {
+    margin: 0 0.25em;
+    cursor: pointer;
+}
+
+.add-question {
+    text-align: center;
+}
+
+.add-question > .fa-plus {
+    color: #e4bd5e;
+    padding-right: 1em;
+}
+
+.add-question > span {
+    cursor: pointer;
+}
+
+.isDragging {
+    opacity: 0.5;
+}
+
+.isOver {
+    border: 1px dashed #e4bd5e;
+}
+
+.isOver.isDragging {
+    transform: none;
+    opacity: 1;
+}
+
+span.drag-handle {
+    content: '....';
+    width: 20px;
+    display: inline-block;
+    overflow: hidden;
+    line-height: 5px;
+    padding-bottom: 5px;
+    cursor: move;
+    vertical-align: text-top;
+    font-size: 12px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    color: #646464;
+    text-shadow: 1px 0 1px #646464;
+}
+
+span.drag-handle::after {
+    content: '.. .. .. ..';
 }
