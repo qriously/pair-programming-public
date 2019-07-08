@@ -28,7 +28,7 @@ The candidates solutions can be verified by eyeing the code, but it may be good 
 ## Things to note
 
 The `Question.jsx` file contains the template for an individual question. This includes the code for the drag/drop logic. **It is not necessary for the candidate to edit this**. The only line of code which may be of interest is
-the `dropQuestion(dragIndex, hoverIndex)` (currently on line 38), which could temporarily be replaced with a `console.log` for example.
+the `dropQuestion(dragIndex, hoverIndex)` (currently on line 40), which could temporarily be replaced with a `console.log` for example.
 
 The drag and drop code may look a bit alien, depending on how familiar the candidate is with react hooks, 
 but the things to be aware of are the available properties/methods added to the question: `isOver`, `isDragging`, and `drop`.
