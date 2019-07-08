@@ -21,6 +21,8 @@ export const Question = ({question, index, active, deleteQuestion, setActive, dr
     };
 
     const ref = useRef(null);
+
+    // Stuff that the drop event provides (namely drop and isOver)
     const [{isOver}, drop] = useDrop({
         accept: ItemTypes.QUESTION,
         drop(item) {
@@ -45,6 +47,8 @@ export const Question = ({question, index, active, deleteQuestion, setActive, dr
             isOver: monitor.isOver()
         })
     });
+
+    // Stuff that the drag event provides (namely isDragging)
     const [{ isDragging }, drag] = useDrag({
         item: { type: ItemTypes.QUESTION, question, index },
         collect: monitor => ({
