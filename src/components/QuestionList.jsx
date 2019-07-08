@@ -15,7 +15,6 @@ export const QuestionList = () => {
     const handleAddQuestion = () => {
         // TODO 1. use the defaultQuestion() method to inset a new question
         //  (with a new unique id) into the questions array
-        // sample answer
     };
 
     const handleDeleteQuestion = (id) => {

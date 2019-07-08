@@ -12,6 +12,10 @@ The page will reload if you make edits.<br>
 
 When first starting the server, there will be lint errors in the terminal - this is expected as some react hook methods aren't actually being used yet.
 
+The questions are already draggable/droppable, but the drop isn't handled, neither is the delete/add question. These are to be added.
+
+To help the candidate understand the context, show that the questions can be dragged, and styles change based on whether the question is being dragged/hovered over.
+
 ## Where to edit
 
 The first 3 `TODOs` are situated in the `QuestionList.jsx` file, and are all examples of simple array manipulation (push new object, delete from specified position, and replace object in specified position). The three methods the candidate needs to fill in are:
