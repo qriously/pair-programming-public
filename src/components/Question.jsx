@@ -33,8 +33,12 @@ export const Question = ({question, index, active, deleteQuestion, setActive, dr
                 return
             }
 
-            // TODO write this function moveQuestion
+            // -------------------- drop question handler -------------------- //
+
             dropQuestion(dragIndex, hoverIndex);
+
+            // -------------------- drop question handler -------------------- //
+
             item.index = hoverIndex
         },
         collect: monitor => ({
