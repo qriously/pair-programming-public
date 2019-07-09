@@ -62,7 +62,10 @@ export const Question = ({question, index, active, deleteQuestion, setActive, dr
                 className={getClassName(active, isOver, isDragging)} onClick={() => setActive(question.id)}>
         <div className={'action-container'}>
             <span className={'action far fa-trash-alt'}
-                  onClick={() => deleteQuestion(question.id)} />
+                  onClick={(e) => {
+                      e.stopPropagation();
+                      deleteQuestion(question.id);
+                  }} />
         </div>
 
         <div>
